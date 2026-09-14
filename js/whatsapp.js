@@ -1,6 +1,5 @@
-// TODO (Raffa/dev): trocar pelo número comercial real,
-// formato internacional sem espaços/símbolos. Ex: 5511999999999
-const WHATSAPP_NUMBER = "5500000000000";
+// Número vem de js/config.js, no formato internacional sem símbolos.
+const WHATSAPP_NUMBER = SITE_CONFIG.whatsappNumber;
 
 const WHATSAPP_MESSAGES = {
   coach: "Oi, Raffa! Vim pelo seu site e quero saber mais sobre o Coach 1:1.",
@@ -9,6 +8,7 @@ const WHATSAPP_MESSAGES = {
 };
 
 function buildWhatsAppLink(key) {
+  if (!/^\d{10,15}$/.test(WHATSAPP_NUMBER)) return "";
   const msg = WHATSAPP_MESSAGES[key] || "Oi, Raffa! Vim pelo seu site.";
   return `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(msg)}`;
 }

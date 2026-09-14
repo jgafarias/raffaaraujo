@@ -5,14 +5,19 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Raffa Araújo | Coach dos Jogadores Casuais — EA FC</title>
 <meta name="description" content="Vença mais no EA FC sem precisar jogar o dia inteiro. Manual do Jogador Casual, Coach 1:1, Análise de Gameplay e Tática Certa com Raffa Araújo.">
+<meta name="theme-color" content="#111111">
+<link rel="canonical" href="https://raffaaraujo.com.br/">
 
 <!-- Open Graph -->
 <meta property="og:type" content="website">
 <meta property="og:title" content="Raffa Araújo | Coach dos Jogadores Casuais">
 <meta property="og:description" content="Vença mais no EA FC sem precisar jogar o dia inteiro.">
-<meta property="og:image" content="assets/og-image.jpg">
+<meta property="og:image" content="https://raffaaraujo.com.br/assets/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
 <meta property="og:url" content="https://raffaaraujo.com.br">
 <meta property="og:locale" content="pt_BR">
+<meta name="twitter:card" content="summary_large_image">
 
 <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -67,7 +72,6 @@
     <a href="index.html" class="logo">RAFFA <span>ARAÚJO</span></a>
     <nav class="nav-links">
       <a href="#produtos">Produtos</a>
-      <a href="#resultados">Resultados</a>
       <a href="#como-funciona">Como funciona</a>
       <a href="#faq">FAQ</a>
     </nav>
@@ -78,7 +82,6 @@
   </div>
   <div class="mobile-menu">
     <a href="#produtos">Produtos</a>
-    <a href="#resultados">Resultados</a>
     <a href="#como-funciona">Como funciona</a>
     <a href="#faq">FAQ</a>
     <a class="btn btn-primary btn-block" href="#" data-whatsapp="coach">Falar com o Raffa</a>
@@ -88,7 +91,6 @@
 <nav class="page-navigation" aria-label="Navegação por seção">
   <a href="#hero" data-label="Início" class="active"></a>
   <a href="#produtos" data-label="Produtos"></a>
-  <a href="#resultados" data-label="Resultados"></a>
   <a href="#sobre" data-label="Por que o Raffa"></a>
   <a href="#como-funciona" data-label="Como funciona"></a>
   <a href="#faq" data-label="FAQ"></a>
@@ -103,12 +105,12 @@
       <p class="hero-sub">Dicas práticas, método claro e acompanhamento para quem joga no tempo livre e quer parar de perder por decisões ruins.</p>
       <div class="hero-actions">
         <a class="btn btn-primary" href="#produtos" data-track-link="clique_hero_cta">Quero evoluir no UT</a>
-        <a class="btn btn-outline" href="manual.html">Conhecer o Manual</a>
+      <a class="btn btn-outline" href="manual.html">Conhecer o Manual</a>
       </div>
       <p class="hero-note">Método usado com jogadores casuais e em contexto competitivo (qualifier com Barreto).</p>
     </div>
     <div class="hero-photo">
-      <img src="assets/1.jpeg" alt="Raffa Araújo, coach de EA FC">
+      <img src="assets/1.jpeg" alt="Raffa Araújo, coach de EA FC" width="1600" height="900" fetchpriority="high" decoding="async">
     </div>
   </div>
 </section>
@@ -167,7 +169,7 @@
 </section>
 
 <!-- 3. RESULTADOS -->
-<section id="resultados">
+<section id="resultados" hidden aria-label="Resultados em preparação">
   <div class="container">
     <div class="section-head center">
       <div class="eyebrow">Resultados</div>
@@ -214,7 +216,7 @@
 <section id="sobre">
   <div class="container about-grid">
     <div class="about-photo">
-      <img src="assets/1.jpeg" alt="Raffa Araújo, coach de EA FC">
+      <img src="assets/1.jpeg" alt="Raffa Araújo, coach de EA FC" width="1600" height="900" loading="lazy" decoding="async">
     </div>
     <div class="about-text">
       <div class="eyebrow">Por que o Raffa?</div>
@@ -299,7 +301,7 @@
 <section class="final-cta">
   <div class="container">
     <h2>Pronto para jogar melhor com o tempo que você tem?</h2>
-    <a class="btn btn-primary" href="manual.html" data-track-link="clique_cta_final">Quero evoluir no UT</a>
+      <a class="btn btn-primary" href="manual.html" data-track-link="clique_cta_final">Quero evoluir no UT</a>
   </div>
 </section>
 
@@ -308,6 +310,7 @@
     <a href="index.html" class="logo">RAFFA <span>ARAÚJO</span></a>
     <div class="footer-links">
       <a href="manual.html">Manual</a>
+      <a href="politica-de-privacidade.html">Privacidade</a>
       <a href="https://instagram.com/raffaaraujo_fut" target="_blank" rel="noopener">Instagram</a>
       <a href="#" data-whatsapp="coach">WhatsApp</a>
     </div>
@@ -320,9 +323,11 @@
   <a class="btn btn-primary" href="#" data-whatsapp="coach">Falar no WhatsApp</a>
 </div>
 
+<script src="js/config.js"></script>
 <script src="js/whatsapp.js"></script>
 <script src="js/utm.js"></script>
 <script src="js/tracking.js"></script>
+<script src="js/consent.js"></script>
 <script src="js/cta.js"></script>
 <script src="js/mobile-menu.js"></script>
 <script src="js/page-nav.js"></script>

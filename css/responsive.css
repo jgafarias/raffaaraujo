@@ -3,6 +3,24 @@
    Carregar por último, depois de todos os componentes.
    ============================================ */
 
+@media (max-width: 767px) {
+  html { scroll-snap-type: y proximity; }
+  body { padding-bottom: 74px; }
+  section {
+    min-height: calc(100svh - var(--header-h));
+    padding: 64px 0;
+  }
+  .hero { padding-top: 32px; padding-bottom: 64px; }
+  .hero-grid { gap: 28px; }
+  .hero-photo { aspect-ratio: 16 / 11; }
+  .hero-photo img { object-position: 70% 18%; }
+  .hero-sub { font-size: 16px; margin-bottom: 24px; }
+  .hero-actions { gap: 10px; }
+  .hero-actions .btn { width: 100%; }
+  .manual-hero { min-height: calc(100svh - var(--header-h)); padding: 56px 0; }
+  .sticky-cta .btn { min-width: 0; padding: 13px 12px; font-size: 11px; }
+}
+
 @media (min-width: 768px) {
   section { padding: 96px 0; }
   .nav-links { display: flex; }
@@ -26,10 +44,14 @@
   .method-flow { flex-direction: row; align-items: stretch; }
   .method-flow-item { width: auto; flex: 1; }
   .method-flow-arrow { padding: 0 18px; display: flex; align-items: center; }
+  .concept-grid { grid-template-columns: repeat(2, 1fr); }
 
   .footer-grid { flex-direction: row; justify-content: space-between; text-align: left; }
 
   .sticky-cta { display: none; }
+  .consent-banner { bottom: 24px; display: flex; align-items: center; gap: 18px; }
+  .consent-banner p { flex: 1; }
+  .consent-actions { margin-top: 0; flex: 0 0 auto; }
 }
 
 /* ============================================

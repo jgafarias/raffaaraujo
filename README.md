@@ -4,8 +4,10 @@ Site estático (HTML/CSS/JS puro, sem build). Baseado no `Briefing_Oficial_Site_
 
 ## Estrutura
 - `index.html` — Home
-- `manual.html` — página de vendas do Manual do Jogador Casual (`/manual`)
+- `manual.html` — página principal do Manual e destino dos links internos
+- `manual/index.html` — rota adicional para publicação em `/manual/`
 - `assets/favicon.svg` — favicon provisório (monograma "RA")
+- `assets/og-image.png` — imagem de compartilhamento social
 
 CSS modular (cada página carrega só o que usa, nessa ordem):
 - `css/variables.css` — tokens de design (cores, fontes, espaçamentos)
@@ -19,8 +21,10 @@ CSS modular (cada página carrega só o que usa, nessa ordem):
 
 JS modular (scripts comuns, sem build e sem `import`/`export` — funcionam mesmo abrindo o `.html` direto no navegador. A ordem no `<head>`/`<body>` importa, pois cada arquivo usa funções definidas no anterior):
 - `js/whatsapp.js` — número e mensagens pré-preenchidas
+- `js/config.js` — WhatsApp, checkout, GA4 e Meta Pixel em um único lugar
 - `js/utm.js` — captura/propagação de UTMs entre páginas e checkout
 - `js/tracking.js` — eventos GA4 (`trackEvent`) e Meta Pixel (`trackMetaStandard`)
+- `js/consent.js` — consentimento prévio para ferramentas de mensuração
 - `js/cta.js` — conecta os botões de WhatsApp/checkout às funções acima
 - `js/mobile-menu.js` — menu hambúrguer
 - `js/page-nav.js` — destaque do indicador de scroll conforme a seção visível
@@ -33,13 +37,13 @@ Ao adicionar algo novo: se for específico de uma página, vai em `home.css`/`ma
 Marcado no código com `[ ... ]` ou comentários `TODO`:
 
 1. ~~**Fotos do Raffa**~~ — `assets/1.jpeg` já está em uso no Hero e nas seções "Por que o Raffa" / "Quem é o Raffa". Trocar por outra foto (ou adicionar mais variações) sempre que quiser.
-2. **Depoimentos/resultados** — os cards em "Resultados" (Home e /manual) têm texto `[Espaço reservado...]`. Trocar por depoimentos reais autorizados.
-3. **Número de WhatsApp** — em `js/whatsapp.js`, constante `WHATSAPP_NUMBER`. Trocar `"5500000000000"` pelo número comercial real.
-4. **Link de checkout da Kiwify** — em `manual.html`, os dois links `data-checkout="manual"` apontam para `https://pay.kiwify.com.br/SEU-LINK-AQUI`. Trocar pelo link real.
+2. **Depoimentos/resultados** — as seções estão ocultas até existirem depoimentos reais autorizados.
+3. **Número de WhatsApp** — preencher `whatsappNumber` em `js/config.js` no formato internacional.
+4. **Link de checkout da Kiwify** — preencher `checkoutManual` em `js/config.js`.
 5. **Domínio/OG** — meta tags `og:url` assumem `https://raffaaraujo.com.br`. Ajustar se o domínio final for outro.
-6. **Imagem de Open Graph** — `assets/og-image.jpg` é referenciada mas ainda não existe; adicionar uma imagem (1200x630px) para preview em redes sociais.
-7. **Módulos do Manual** — a lista em `manual.html#modulos` é um rascunho de exemplo; confirmar com o Raffa a estrutura real do curso antes de publicar.
-8. **Analytics** — em `index.html` (e `manual.html`) há blocos comentados para Google Analytics 4 e Meta Pixel. Descomentar e inserir os IDs reais quando as contas estiverem prontas.
+6. ~~**Imagem de Open Graph**~~ — `assets/og-image.png` criada e configurada.
+7. **Módulos do Manual** — a página apresenta pilares gerais; substituir pela grade confirmada quando disponível.
+8. **Analytics** — preencher `ga4MeasurementId` e/ou `metaPixelId` em `js/config.js`; o carregamento ocorrerá somente após consentimento.
 
 ## Rodando localmente
 

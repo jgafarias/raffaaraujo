@@ -1,5 +1,5 @@
-// Indicador de scroll (pontos fixos à direita, desktop).
-// Destaca o ponto correspondente à seção visível conforme o usuário rola a página.
+// Indicador de scroll (pontos fixos à direita, desktop e mobile).
+// Usa uma linha de leitura dentro do viewport para acompanhar também seções altas.
 function wirePageNav() {
   const dots = document.querySelectorAll(".page-navigation a");
   if (!dots.length) return;
@@ -14,17 +14,28 @@ function wirePageNav() {
   ) || 76;
 
   function updateActive() {
-    let current = sections[0];
-    sections.forEach((section) => {
-      if (section.getBoundingClientRect().top <= headerH + 10) {
-        current = section;
-      }
+    const readingLine = headerH + (window.innerHeight - headerH) * 0.38;
+    let current = sections.find((section) => {
+      const rect = section.getBoundingClientRect();
+      return rect.top <= readingLine && rect.bottom > readingLine;
     });
+
+    if (!current) {
+      current = sections.reduce((closest, section) => {
+        const distance = Math.abs(section.getBoundingClientRect().top - headerH);
+        return distance < closest.distance ? { section, distance } : closest;
+      }, { section: sections[0], distance: Infinity }).section;
+    }
+
     dots.forEach((a) => {
-      a.classList.toggle("active", a.getAttribute("href") === `#${current.id}`);
+      const active = a.getAttribute("href") === `#${current.id}`;
+      a.classList.toggle("active", active);
+      if (active) a.setAttribute("aria-current", "true");
+      else a.removeAttribute("aria-current");
     });
   }
 
   window.addEventListener("scroll", updateActive, { passive: true });
+  window.addEventListener("resize", updateActive, { passive: true });
   updateActive();
 }

@@ -1,10 +1,10 @@
 /* ============================================
-   RAFFA ARAÚJO — Indicador de scroll (pontos fixos, desktop)
+   RAFFA ARAÚJO — Indicador de scroll (desktop e mobile)
    ============================================ */
 
 .page-navigation {
   position: fixed;
-  right: 28px;
+  right: max(8px, env(safe-area-inset-right));
   top: 50%;
   transform: translateY(-50%);
   z-index: 90;
@@ -39,6 +39,7 @@
   border-color: var(--green);
   box-shadow: 0 0 0 4px rgba(98, 227, 19, 0.18);
 }
+.page-navigation a[aria-current="true"] { background: var(--green); }
 .page-navigation a::after {
   content: attr(data-label);
   position: absolute;
@@ -58,3 +59,10 @@
   transition: opacity 0.15s ease;
 }
 .page-navigation a:hover::after { opacity: 1; }
+
+@media (min-width: 768px) {
+  .page-navigation {
+    right: 28px;
+    display: flex;
+  }
+}

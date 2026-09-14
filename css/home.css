@@ -56,6 +56,13 @@
 .hero-actions { display: flex; flex-wrap: wrap; gap: 14px; }
 .hero-note { margin-top: 20px; font-size: 13px; color: var(--muted); }
 
+/* ---------- Posicionamento ---------- */
+.positioning-section {
+  background: linear-gradient(180deg, rgba(98, 227, 19, 0.04), transparent);
+}
+.positioning-copy { max-width: 820px; }
+.positioning-copy p { color: var(--muted); font-size: 18px; margin-top: 18px; }
+
 /* ---------- Cards de produto ---------- */
 .products-grid {
   display: grid;
@@ -103,6 +110,15 @@
 .product-icon svg { width: 24px; height: 24px; stroke: var(--green); }
 .product-card h3 { font-size: 20px; }
 .product-card p.desc { color: var(--muted); font-size: 15px; flex-grow: 1; }
+.product-detail,
+.product-kicker {
+  color: var(--white);
+  font-size: 13px;
+  line-height: 1.55;
+  padding-top: 12px;
+  border-top: 1px solid var(--border);
+}
+.product-kicker { color: var(--green); font-weight: 700; padding-top: 0; border-top: 0; }
 .product-price {
   font-size: 22px;
   font-weight: 800;
@@ -140,6 +156,29 @@
 .method-step h3 { font-size: 18px; margin-bottom: 8px; }
 .method-step p { color: var(--muted); font-size: 14px; }
 
+/* ---------- Para quem é o Coach ---------- */
+.audience-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 16px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+.audience-item {
+  background: var(--graphite);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  padding: 22px;
+  color: var(--muted);
+  font-size: 16px;
+}
+.audience-item::before {
+  content: "✓";
+  color: var(--green);
+  font-weight: 800;
+  margin-right: 10px;
+}
+
 /* ---------- Frase de posicionamento ---------- */
 .quote-block {
   background: linear-gradient(160deg, var(--graphite), var(--black));
@@ -156,6 +195,12 @@
   letter-spacing: -0.01em;
 }
 .quote-block blockquote .hl { color: var(--green); }
+.quote-block p {
+  max-width: 700px;
+  margin: 24px auto 0;
+  color: var(--muted);
+  font-size: 17px;
+}
 
 /* ---------- CTA final ---------- */
 .final-cta {
@@ -165,3 +210,9 @@
     var(--black);
 }
 .final-cta h2 { max-width: 640px; margin: 0 auto 28px; }
+.final-cta p { color: var(--muted); max-width: 620px; margin: -12px auto 26px; }
+.final-actions { justify-content: center; }
+
+@media (min-width: 768px) {
+  .audience-grid { grid-template-columns: repeat(2, 1fr); }
+}

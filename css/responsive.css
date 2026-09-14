@@ -4,7 +4,7 @@
    ============================================ */
 
 @media (max-width: 767px) {
-  html { scroll-snap-type: y proximity; }
+  html { scroll-snap-type: y mandatory; }
   body { padding-bottom: 74px; }
   section {
     min-height: calc(100dvh - var(--header-h));

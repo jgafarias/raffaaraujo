@@ -7,6 +7,8 @@
 
 html {
   scroll-behavior: smooth;
+  scroll-snap-type: y mandatory;
+  scroll-padding-top: var(--header-h);
   scrollbar-width: thin;
   scrollbar-color: var(--graphite-2) var(--black);
 }
@@ -51,13 +53,17 @@ section {
   padding: 72px 0;
   position: relative;
   min-height: calc(100vh - var(--header-h));
+  min-height: calc(100svh - var(--header-h));
   min-height: calc(100dvh - var(--header-h));
   display: flex;
   align-items: center;
   scroll-snap-align: start;
+  scroll-snap-stop: always;
 }
 section > .container { width: 100%; }
-section[id] { scroll-margin-top: var(--header-h); }
+/* O scroll-padding do html já reserva o cabeçalho sticky.
+   Não aplicar scroll-margin aqui: os dois valores somados criam uma faixa vazia. */
+section[id] { scroll-margin-top: 0; }
 
 .eyebrow {
   display: inline-block;

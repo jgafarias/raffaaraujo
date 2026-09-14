@@ -37,7 +37,7 @@ Ao adicionar algo novo: se for específico de uma página, vai em `home.css`/`ma
 Marcado no código com `[ ... ]` ou comentários `TODO`:
 
 1. ~~**Fotos do Raffa**~~ — `assets/1.jpeg` já está em uso no Hero e nas seções "Por que o Raffa" / "Quem é o Raffa". Trocar por outra foto (ou adicionar mais variações) sempre que quiser.
-2. **Depoimentos/resultados** — as seções estão ocultas até existirem depoimentos reais autorizados.
+2. **Depoimentos/resultados** — seção `#resultados` (Home, antes de "Escolha como evoluir") está oculta (`hidden`) até existirem depoimentos reais autorizados pelo Raffa. Só usar depoimentos reais — não inventar nem manter placeholders visíveis.
 3. **Número de WhatsApp** — preencher `whatsappNumber` em `js/config.js` no formato internacional.
 4. **Link de checkout da Kiwify** — preencher `checkoutManual` em `js/config.js`.
 5. **Domínio/OG** — meta tags `og:url` assumem `https://raffaaraujo.com.br`. Ajustar se o domínio final for outro.

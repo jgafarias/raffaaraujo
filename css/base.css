@@ -7,7 +7,6 @@
 
 html {
   scroll-behavior: smooth;
-  scroll-snap-type: y mandatory;
   scroll-padding-top: var(--header-h);
   scrollbar-width: thin;
   scrollbar-color: var(--graphite-2) var(--black);
@@ -57,8 +56,6 @@ section {
   min-height: calc(100dvh - var(--header-h));
   display: flex;
   align-items: center;
-  scroll-snap-align: start;
-  scroll-snap-stop: always;
 }
 section > .container { width: 100%; }
 /* O scroll-padding do html já reserva o cabeçalho sticky.

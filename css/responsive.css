@@ -7,7 +7,7 @@
   html { scroll-snap-type: y proximity; }
   body { padding-bottom: 74px; }
   section {
-    min-height: calc(100svh - var(--header-h));
+    min-height: calc(100dvh - var(--header-h));
     padding: 64px 0;
   }
   .hero { padding-top: 32px; padding-bottom: 64px; }
@@ -17,7 +17,7 @@
   .hero-sub { font-size: 16px; margin-bottom: 24px; }
   .hero-actions { gap: 10px; }
   .hero-actions .btn { width: 100%; }
-  .manual-hero { min-height: calc(100svh - var(--header-h)); padding: 56px 0; }
+  .manual-hero { min-height: calc(100dvh - var(--header-h)); padding: 56px 0; }
   .sticky-cta .btn { min-width: 0; padding: 13px 12px; font-size: 11px; }
 }
 

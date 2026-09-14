@@ -7,7 +7,6 @@
 
 html {
   scroll-behavior: smooth;
-  scroll-padding-top: var(--header-h);
   scrollbar-width: thin;
   scrollbar-color: var(--graphite-2) var(--black);
 }
@@ -52,6 +51,7 @@ section {
   padding: 72px 0;
   position: relative;
   min-height: calc(100vh - var(--header-h));
+  min-height: calc(100dvh - var(--header-h));
   display: flex;
   align-items: center;
   scroll-snap-align: start;

@@ -1,0 +1,70 @@
+/* ============================================
+   RAFFA ARAÚJO — Header, navegação e menu mobile
+   ============================================ */
+
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: rgba(17, 17, 17, 0.85);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--border);
+}
+.site-header .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: var(--header-h);
+}
+.logo {
+  font-weight: 800;
+  font-size: 18px;
+  letter-spacing: 0.02em;
+}
+.logo span { color: var(--green); }
+
+.nav-links {
+  display: none;
+  align-items: center;
+  gap: 32px;
+  font-size: 14px;
+  font-weight: 600;
+}
+.nav-links a { color: var(--muted); transition: color 0.15s ease; }
+.nav-links a:hover { color: var(--white); }
+
+.header-cta { display: none; }
+
+.nav-toggle {
+  background: none;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  width: 42px;
+  height: 42px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+.nav-toggle span,
+.nav-toggle::before,
+.nav-toggle::after { display: none; }
+.nav-toggle svg { width: 20px; height: 20px; stroke: var(--white); }
+
+.mobile-menu {
+  display: none;
+  flex-direction: column;
+  gap: 4px;
+  background: var(--graphite);
+  border-bottom: 1px solid var(--border);
+  padding: 12px 20px 20px;
+}
+.mobile-menu.open { display: flex; }
+.mobile-menu a {
+  padding: 14px 4px;
+  border-bottom: 1px solid var(--border);
+  font-weight: 600;
+  color: var(--white);
+}
+.mobile-menu a:last-child { border-bottom: none; }
+.mobile-menu .btn { margin-top: 12px; }

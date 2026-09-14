@@ -1,0 +1,167 @@
+/* ============================================
+   RAFFA ARAÚJO — Home (index.html)
+   ============================================ */
+
+/* ---------- Hero ---------- */
+.hero {
+  padding-top: 56px;
+  padding-bottom: 56px;
+  background:
+    radial-gradient(120% 90% at 50% -10%, rgba(98, 227, 19, 0.16), transparent 60%),
+    var(--black);
+  overflow: hidden;
+}
+.hero-grid {
+  display: grid;
+  gap: 40px;
+  align-items: center;
+}
+.hero-photo {
+  order: -1;
+  position: relative;
+  aspect-ratio: 4 / 5;
+  border-radius: var(--radius);
+  background: linear-gradient(160deg, var(--graphite-2), var(--black) 70%);
+  border: 1px solid var(--border);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+.hero-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 65% 20%;
+}
+.hero-eyebrow {
+  color: var(--green);
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  font-size: 13px;
+  margin-bottom: 18px;
+}
+.hero h1 {
+  font-size: clamp(32px, 7vw, 54px);
+  margin-bottom: 20px;
+}
+.hero h1 .hl { color: var(--green); }
+.hero-sub {
+  color: var(--muted);
+  font-size: 18px;
+  max-width: 480px;
+  margin-bottom: 32px;
+}
+.hero-actions { display: flex; flex-wrap: wrap; gap: 14px; }
+.hero-note { margin-top: 20px; font-size: 13px; color: var(--muted); }
+
+/* ---------- Cards de produto ---------- */
+.products-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+}
+.product-card {
+  background: var(--graphite);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 28px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  transition: transform 0.15s ease, border-color 0.15s ease;
+}
+.product-card:hover { transform: translateY(-4px); border-color: rgba(98,227,19,0.35); }
+.product-card.featured {
+  border-color: var(--green);
+  background: linear-gradient(160deg, rgba(98,227,19,0.08), var(--graphite) 60%);
+  position: relative;
+}
+.product-card.featured::before {
+  content: "MAIS COMPLETO";
+  position: absolute;
+  top: -12px;
+  left: 28px;
+  background: var(--green);
+  color: var(--black);
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.06em;
+  padding: 5px 12px;
+  border-radius: 999px;
+}
+.product-icon {
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
+  background: rgba(98, 227, 19, 0.12);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.product-icon svg { width: 24px; height: 24px; stroke: var(--green); }
+.product-card h3 { font-size: 20px; }
+.product-card p.desc { color: var(--muted); font-size: 15px; flex-grow: 1; }
+.product-price {
+  font-size: 22px;
+  font-weight: 800;
+  color: var(--white);
+}
+.product-price small { font-size: 13px; color: var(--muted); font-weight: 500; display: block; }
+
+/* ---------- Metodologia (Observo/Oriento/Cobro) ---------- */
+.method-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+  counter-reset: step;
+}
+.method-step {
+  background: var(--graphite);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 28px;
+  position: relative;
+}
+.method-step .num {
+  font-size: 13px;
+  font-weight: 800;
+  color: var(--black);
+  background: var(--green);
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 18px;
+}
+.method-step h3 { font-size: 18px; margin-bottom: 8px; }
+.method-step p { color: var(--muted); font-size: 14px; }
+
+/* ---------- Frase de posicionamento ---------- */
+.quote-block {
+  background: linear-gradient(160deg, var(--graphite), var(--black));
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+  text-align: center;
+}
+.quote-block blockquote {
+  max-width: 780px;
+  margin: 0 auto;
+  font-size: clamp(24px, 5vw, 38px);
+  font-weight: 800;
+  line-height: 1.25;
+  letter-spacing: -0.01em;
+}
+.quote-block blockquote .hl { color: var(--green); }
+
+/* ---------- CTA final ---------- */
+.final-cta {
+  text-align: center;
+  background:
+    radial-gradient(80% 100% at 50% 100%, rgba(98, 227, 19, 0.14), transparent 60%),
+    var(--black);
+}
+.final-cta h2 { max-width: 640px; margin: 0 auto 28px; }

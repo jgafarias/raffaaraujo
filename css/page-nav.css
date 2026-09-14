@@ -1,0 +1,60 @@
+/* ============================================
+   RAFFA ARAÚJO — Indicador de scroll (pontos fixos, desktop)
+   ============================================ */
+
+.page-navigation {
+  position: fixed;
+  right: 28px;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 90;
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  gap: 14px;
+}
+.page-navigation::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: -20px;
+  bottom: -20px;
+  width: 1px;
+  background: var(--border);
+  transform: translateX(-50%);
+  z-index: -1;
+}
+.page-navigation a {
+  position: relative;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: var(--graphite-2);
+  border: 1px solid var(--border);
+  transition: background 0.2s ease, border-color 0.2s ease, transform 0.2s ease;
+}
+.page-navigation a:hover { border-color: var(--green); transform: scale(1.2); }
+.page-navigation a.active {
+  background: var(--green);
+  border-color: var(--green);
+  box-shadow: 0 0 0 4px rgba(98, 227, 19, 0.18);
+}
+.page-navigation a::after {
+  content: attr(data-label);
+  position: absolute;
+  right: 22px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: var(--graphite);
+  border: 1px solid var(--border);
+  color: var(--white);
+  font-size: 12px;
+  font-weight: 600;
+  white-space: nowrap;
+  padding: 6px 12px;
+  border-radius: 999px;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.15s ease;
+}
+.page-navigation a:hover::after { opacity: 1; }

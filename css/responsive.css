@@ -1,0 +1,40 @@
+/* ============================================
+   RAFFA ARAÚJO — Responsivo (mobile-first)
+   Carregar por último, depois de todos os componentes.
+   ============================================ */
+
+@media (min-width: 768px) {
+  section { padding: 96px 0; }
+  .nav-links { display: flex; }
+  .header-cta { display: inline-flex; }
+  .nav-toggle { display: none; }
+  .mobile-menu { display: none !important; }
+  .page-navigation { display: flex; }
+
+  .hero-grid { grid-template-columns: 1fr 1fr; }
+  .hero-photo { order: 1; }
+
+  .products-grid { grid-template-columns: repeat(2, 1fr); }
+  .results-grid { grid-template-columns: repeat(3, 1fr); }
+  .about-grid { grid-template-columns: 1fr 1fr; }
+  .about-photo { order: 1; }
+  .method-grid { grid-template-columns: repeat(3, 1fr); }
+
+  .pain-grid, .learn-grid { grid-template-columns: repeat(2, 1fr); }
+  .forwho-grid { grid-template-columns: 1fr 1fr; }
+
+  .method-flow { flex-direction: row; align-items: stretch; }
+  .method-flow-item { width: auto; flex: 1; }
+  .method-flow-arrow { padding: 0 18px; display: flex; align-items: center; }
+
+  .footer-grid { flex-direction: row; justify-content: space-between; text-align: left; }
+
+  .sticky-cta { display: none; }
+}
+
+/* ============================================
+   Responsive — Desktop 1100px+
+   ============================================ */
+@media (min-width: 1100px) {
+  .products-grid { grid-template-columns: repeat(4, 1fr); }
+}

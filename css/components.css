@@ -1,0 +1,157 @@
+/* ============================================
+   RAFFA ARAÚJO — Componentes compartilhados
+   (usados na Home e em /manual)
+   ============================================ */
+
+/* ---------- Resultados / depoimentos ---------- */
+.results-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 18px;
+}
+.result-card {
+  background: var(--graphite);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 24px;
+}
+.result-card .stars { color: var(--green); font-size: 14px; margin-bottom: 12px; letter-spacing: 2px; }
+.result-card p.quote { font-size: 15px; color: var(--white); margin-bottom: 16px; }
+.result-card .who { display: flex; align-items: center; gap: 10px; }
+.result-card .who .dot {
+  width: 34px; height: 34px; border-radius: 50%;
+  background: var(--graphite-2); border: 1px solid var(--border);
+  display: flex; align-items: center; justify-content: center;
+  font-size: 12px; font-weight: 700; color: var(--green);
+}
+.result-card .who span { font-size: 13px; color: var(--muted); font-weight: 600; }
+.placeholder-flag {
+  display: inline-block;
+  margin-top: 14px;
+  font-size: 11px;
+  color: var(--green);
+  border: 1px dashed rgba(98,227,19,0.4);
+  border-radius: 6px;
+  padding: 3px 8px;
+  letter-spacing: 0.03em;
+}
+
+/* ---------- Bio com foto (Home #sobre e /manual #quem-e) ---------- */
+.about-grid {
+  display: grid;
+  gap: 32px;
+  align-items: center;
+}
+.about-photo {
+  order: -1;
+  aspect-ratio: 16/11;
+  border-radius: var(--radius);
+  background: linear-gradient(160deg, var(--graphite-2), var(--black) 70%);
+  border: 1px solid var(--border);
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.about-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 65% 20%;
+}
+.about-text p { color: var(--muted); font-size: 17px; margin-bottom: 16px; }
+.about-facts {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 14px;
+  margin-top: 24px;
+}
+.about-facts .fact {
+  background: var(--graphite);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  padding: 16px;
+}
+.about-facts .fact strong { display: block; color: var(--green); font-size: 22px; }
+.about-facts .fact span { font-size: 13px; color: var(--muted); }
+
+/* ---------- FAQ ---------- */
+.faq-list { max-width: 760px; margin: 0 auto; }
+.faq-item {
+  border-bottom: 1px solid var(--border);
+}
+.faq-item summary {
+  cursor: pointer;
+  list-style: none;
+  padding: 22px 4px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 16px;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.5;
+}
+.faq-item summary::-webkit-details-marker { display: none; }
+.faq-item summary .plus {
+  flex-shrink: 0;
+  margin-top: 1px;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  border: 1px solid var(--border);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--green);
+  transition: transform 0.25s ease, border-color 0.25s ease, background-color 0.25s ease;
+}
+.faq-item summary .plus svg {
+  width: 12px;
+  height: 12px;
+  display: block;
+  transition: transform 0.25s ease;
+}
+.faq-item[open] summary .plus {
+  border-color: var(--green);
+  background: rgba(98, 227, 19, 0.12);
+}
+.faq-item[open] summary .plus svg { transform: rotate(45deg); }
+.faq-item .faq-answer {
+  padding: 0 4px 22px;
+  color: var(--muted);
+  font-size: 15px;
+  max-width: 640px;
+}
+
+/* ---------- Footer ---------- */
+.site-footer {
+  border-top: 1px solid var(--border);
+  padding: 40px 0;
+}
+.footer-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+  text-align: center;
+}
+.footer-grid .logo { font-size: 16px; }
+.footer-links { display: flex; gap: 20px; flex-wrap: wrap; justify-content: center; font-size: 13px; color: var(--muted); }
+.footer-links a:hover { color: var(--green); }
+.footer-copy { font-size: 12px; color: var(--muted); }
+
+/* ---------- Barra fixa de WhatsApp (mobile) ---------- */
+.sticky-cta {
+  position: fixed;
+  left: 0; right: 0; bottom: 0;
+  z-index: 90;
+  background: rgba(17,17,17,0.92);
+  backdrop-filter: blur(10px);
+  border-top: 1px solid var(--border);
+  padding: 12px 16px;
+  display: flex;
+  gap: 10px;
+}
+.sticky-cta .btn { flex: 1; padding: 14px 16px; font-size: 13px; }

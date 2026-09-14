@@ -1,0 +1,21 @@
+/* ============================================
+   RAFFA ARAÚJO — Design tokens
+   ============================================ */
+
+:root {
+  --green: #62E313;
+  --green-dark: #4FBE0E;
+  --black: #111111;
+  --graphite: #202020;
+  --graphite-2: #2A2A2A;
+  --white: #FFFFFF;
+  --muted: #A8A8A8;
+  --border: rgba(255, 255, 255, 0.08);
+
+  --font: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+
+  --radius: 16px;
+  --radius-sm: 10px;
+  --container: 1120px;
+  --header-h: 76px;
+}

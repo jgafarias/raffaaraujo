@@ -1,0 +1,136 @@
+/* ============================================
+   RAFFA ARAÚJO — Página /manual
+   ============================================ */
+
+.manual-hero { padding-top: 48px; text-align: center; }
+.manual-hero .badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(98,227,19,0.1);
+  border: 1px solid rgba(98,227,19,0.3);
+  color: var(--green);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  padding: 6px 14px;
+  border-radius: 999px;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+}
+.manual-hero h1 { font-size: clamp(30px, 6vw, 48px); max-width: 800px; margin: 0 auto 18px; }
+.manual-hero p.sub { color: var(--muted); font-size: 18px; max-width: 620px; margin: 0 auto 32px; }
+
+.pain-grid, .learn-grid, .forwho-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 16px;
+}
+.pain-card, .learn-card {
+  background: var(--graphite);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  padding: 20px;
+  font-size: 15px;
+  color: var(--muted);
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+}
+.pain-card svg, .learn-card svg { flex-shrink: 0; width: 20px; height: 20px; margin-top: 2px; }
+.pain-card svg { stroke: #FF6B6B; }
+.learn-card svg { stroke: var(--green); }
+
+.method-flow {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  align-items: center;
+}
+.method-flow-item {
+  background: var(--graphite);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 24px 28px;
+  width: 100%;
+  text-align: center;
+}
+.method-flow-item h3 { color: var(--green); font-size: 20px; margin-bottom: 6px; }
+.method-flow-item p { color: var(--muted); font-size: 14px; }
+.method-flow-arrow { color: var(--green); font-size: 22px; padding: 10px 0; }
+
+.forwho-grid { grid-template-columns: 1fr; }
+.forwho-card {
+  border-radius: var(--radius);
+  padding: 24px;
+  border: 1px solid var(--border);
+}
+.forwho-card.yes { background: rgba(98,227,19,0.06); border-color: rgba(98,227,19,0.3); }
+.forwho-card.no { background: rgba(255,255,255,0.02); }
+.forwho-card h3 { font-size: 16px; margin-bottom: 14px; }
+.forwho-card.yes h3 { color: var(--green); }
+.forwho-card ul { display: flex; flex-direction: column; gap: 10px; }
+.forwho-card li { font-size: 14px; color: var(--muted); display: flex; gap: 10px; }
+
+.offer-box {
+  max-width: 560px;
+  margin: 0 auto;
+  background: linear-gradient(160deg, rgba(98,227,19,0.1), var(--graphite));
+  border: 1px solid rgba(98,227,19,0.35);
+  border-radius: var(--radius);
+  padding: 36px 28px;
+  text-align: center;
+}
+.offer-box .seats {
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--green);
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  margin-bottom: 12px;
+}
+.offer-box .price {
+  font-size: 44px;
+  font-weight: 800;
+  margin-bottom: 4px;
+}
+.offer-box .price-old {
+  font-size: 15px;
+  color: var(--muted);
+  text-decoration: line-through;
+  margin-right: 8px;
+}
+.offer-box .price-note { font-size: 13px; color: var(--muted); margin-bottom: 24px; }
+.offer-box .guarantee { margin-top: 20px; font-size: 12px; color: var(--muted); }
+
+.didactic-strip {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  justify-content: center;
+}
+.didactic-strip .pill {
+  background: var(--graphite);
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  padding: 10px 18px;
+  font-size: 13px;
+  color: var(--muted);
+  font-weight: 600;
+}
+.didactic-strip .pill strong { color: var(--green); }
+
+.who-strip {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 24px;
+}
+.who-strip span {
+  background: var(--graphite);
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  padding: 8px 16px;
+  font-size: 13px;
+  color: var(--muted);
+}
